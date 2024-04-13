@@ -22,3 +22,6 @@ footer{
     color: white;
     font-style: italic;
 }
+button{
+    padding: 10px 15px;
+}
