@@ -12,11 +12,21 @@ function setRandomColor(){
 }
 
 function counting(){
-    var taboada = Number(document.getElementById('taboada').value)
+    var t = document.getElementById('taboada')
     var res = document.getElementById('res')
     document.body.style.background = setRandomColor()
-    res.innerHTML = `Taboada do ${taboada}: <br>`
-    for (var c = 1; c <= 10; c++){
-        res.innerHTML += `${taboada} x ${c} = ${taboada * c} <br>`
+    
+    if (t.value.length == 0){
+
+        //window.alert('[ERRO] Faltam dados!')
+        res.innerHTML = 'Esperando valor...'
+
+    }else{
+        var taboada = Number(t.value)
+        res.innerHTML = `Taboada do ${taboada}: <br>`
+        for (var c = 1; c <= 10; c++){
+            res.innerHTML += `${taboada} x ${c} = ${taboada * c} <br>`
+        }
     }
+    
 }
