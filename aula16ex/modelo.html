@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contando...</title>
+    <title>Number Analyzer</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1>Contando...</h1>
+        <h1>Number Analyzer</h1>
     </header>
     <Section>
-        <p>Início <input type="number" name="inicio" id="inicio"></p>
-        <p>Fim <input type="number" name="fim" id="fim"></p>
-        <p>Passo <input type="number" name="passo" id="passo"></p>
-        <button onclick="counting()">Contar</button>
-        <p id="res">Preparando a contagem...</p>
+
+        Number (between 1 and 100) <input type="number" name="number" id="number"> <button onclick="add()">Add</button>
+        
+        <select name="list" id="seltab" size="10"></select> <br>
+        <button onclick="calculate()">Finish</button>
+
+        <p id="res"></p>
+
     </Section>
     <footer>
         <p>&copy; CursoemVideo</p>

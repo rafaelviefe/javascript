@@ -1,0 +1,39 @@
+body{
+    background: rgb(107, 107, 241);
+    font: normal 18px Arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 98vh;
+    
+}
+header{
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.507);
+}
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 30px 15px 15px 15px;
+    width: 500px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.164);
+}
+footer{
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.507);
+    font-style: italic;
+}
+button{
+    font: 600 16px Arial;
+    padding: 3px 20px;
+}
+select{
+    width: 300px;
+    height: 100px;
+    margin: 10px 0;
+    font: italic 18px Arial;
+}
+p{
+    font: Normal 20px Arial;
+}
