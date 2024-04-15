@@ -12,14 +12,43 @@ function setRandomColor(){
 }
 
 function counting(){
-    var inicio = Number(document.getElementById('inicio').value)
-    var fim = Number(document.getElementById('fim').value)
-    var passo = Number(document.getElementById('passo').value)
-    var res = document.getElementById('res')
-    res.innerHTML = 'Contando: <br>'
-    document.body.style.background = setRandomColor()
-    for (var c = inicio; c <= fim; c += passo){
-        res.innerHTML += `&#x1F449 ${c}`
+
+    let inicio = document.getElementById('inicio')
+    let fim = document.getElementById('fim')
+    let passo = document.getElementById('passo')
+    let res = document.getElementById('res')
+
+    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+
+        //window.alert('[ERRO] Faltam dados!')
+        res.innerHTML = 'Incontável'
+
+    }else{
+        let i = Number(inicio.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+        
+        if (p <= 0){
+            window.alert('Passo inválido! Considerando PASSO 1')
+            p = 1
+        }
+        res.innerHTML = 'Contando: <br>'
+        document.body.style.background = setRandomColor()
+
+        if (i < f){
+            for (let c = i; c <= f; c += p){
+                res.innerHTML += `&#x1F449 ${c}`
+            }
+        }else{
+            for (let c = i; c >= f; c -= p){
+                res.innerHTML += `&#x1F449 ${c}`
+            }
+
+        }
+        
+        res.innerHTML += '&#x1F3F4'
+
     }
-    res.innerHTML += '&#x1F3F4'
+
+    
 }
