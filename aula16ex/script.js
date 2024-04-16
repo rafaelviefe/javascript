@@ -4,14 +4,19 @@ function add(){
 
     res.innerHTML = ``
     
-    if (number.value.length == 0 || number.value < 1 || number.value > 100){
-        alert('Invalid Number!')
+    if (number.value < 1 || number.value > 100){
+        alert('Invalid imput!')
+        number.value = ''
+        number.focus()
         return
     }
 
     let n = Number(number.value)
+
     if (list.indexOf(n) != -1){
         alert('Number already exists!')
+        number.value = ''
+        number.focus()
         return
     }
 
@@ -19,6 +24,9 @@ function add(){
     let item = document.createElement('option')
     item.text = `Value ${n} added.`
     tab.appendChild(item)
+
+    number.value = ''
+    number.focus()
 }
 
 function calculate(){
