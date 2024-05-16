@@ -58,11 +58,8 @@ class Carro{
         this.portas = portas
         this.cor = undefined
     }
-    setNome(nome){
-        this.nome = nome
-    }
-    setPortas(portas){
-        this.portas = portas
+    setCor(cor){
+        this.cor = cor
     }
 }
 
@@ -71,6 +68,7 @@ class Militar extends Carro{
         super(nome, portas)
         this.blindagem = blindagem
         this.municao = municao
+        this.setCor("verde")
     }
 }
 
