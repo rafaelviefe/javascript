@@ -9,7 +9,11 @@ const carros=document.getElementById("carros")
 
 let a_carros = []
 
-
+const retirar = (quem) => {
+    a_carros.filter((el) => {
+        return el.id != quem
+    })
+}
 
 f_militar.addEventListener('click', ()=>{
     f_nome.value = ""
@@ -40,8 +44,10 @@ const gerenciandoCarros = () => {
         div.innerHTML += `Munição: ${c.municao}<br/>`
         const remover = document.createElement("button")
         remover.innerHTML = "Remover"
-        remover.addEventListener('click', ()=>{
+        remover.addEventListener('click', (evt)=>{
             remover.parentElement.setAttribute("id", "removido")
+            const quemRemover = evt.target.parentNode.id
+            retirar(quemRemover)
         })
         div.appendChild(remover)
         carros.appendChild(div)
