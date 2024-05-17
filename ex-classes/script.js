@@ -9,6 +9,8 @@ const carros=document.getElementById("carros")
 
 let a_carros = []
 
+
+
 f_militar.addEventListener('click', ()=>{
     f_nome.value = ""
     f_portas.value = 0
@@ -36,8 +38,13 @@ const gerenciandoCarros = () => {
         div.innerHTML += `Cor: ${c.cor}<br/>`
         div.innerHTML += `Blindagem: ${c.blindagem}<br/>`
         div.innerHTML += `Munição: ${c.municao}<br/>`
+        const remover = document.createElement("button")
+        remover.innerHTML = "Remover"
+        remover.addEventListener('click', ()=>{
+            remover.parentElement.setAttribute("id", "removido")
+        })
+        div.appendChild(remover)
         carros.appendChild(div)
-        // CRIAR BOTAO DE TIRAR
     })
 }
 
