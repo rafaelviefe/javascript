@@ -10,8 +10,8 @@ const carros=document.getElementById("carros")
 let a_carros = []
 
 const retirar = (quem) => {
-    a_carros.filter((el) => {
-        return el.id != quem
+    a_carros = a_carros.filter((el) => {
+        return el.ide!=quem
     })
 }
 
@@ -37,6 +37,7 @@ const gerenciandoCarros = () => {
     a_carros.forEach((c)=>{
         const div = document.createElement("div")
         div.setAttribute('class', 'carro')
+        div.setAttribute("data-ide", c.ide)
         div.innerHTML = `Nome: ${c.nome}<br/>`
         div.innerHTML += `Portas: ${c.portas}<br/>`
         div.innerHTML += `Cor: ${c.cor}<br/>`
@@ -45,9 +46,9 @@ const gerenciandoCarros = () => {
         const remover = document.createElement("button")
         remover.innerHTML = "Remover"
         remover.addEventListener('click', (evt)=>{
-            remover.parentElement.setAttribute("id", "removido")
-            const quemRemover = evt.target.parentNode.id
+            const quemRemover = evt.target.parentNode.dataset.ide
             retirar(quemRemover)
+            gerenciandoCarros()
         })
         div.appendChild(remover)
         carros.appendChild(div)
@@ -68,6 +69,7 @@ botao.addEventListener('click', ()=>{
 class Carro{
     constructor(nome, portas){
         this.nome = nome
+        this.ide = nome+portas
         this.portas = portas
         this.cor = undefined
     }
