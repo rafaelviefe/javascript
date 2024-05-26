@@ -18,7 +18,7 @@
 .controle{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     border-radius: 8px;
@@ -38,6 +38,23 @@ button:hover{
     border: 1px solid #e4e1e1;
     color: #e4e1e1;
     transition: 0.3s;
+}
+button:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+button:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}
+
+button:disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
 }
 input[type='number'], #num_objetos{
     padding: 5px;
