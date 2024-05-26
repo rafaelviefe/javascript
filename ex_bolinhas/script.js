@@ -23,12 +23,10 @@ class Bola{
         this.diry=Math.random()*10>5?1:-1
         this.palco=palco
         this.arrayBolas=arrayBolas
-        this.id=Date.now()+"_"+Math.floor(Math.random()*100000000000)
-        // this.id=Date.now()+"_"+numBola
+        this.id=Date.now()+"_"+(numBola+1)
         this.desenhar()
         this.controle=setInterval(this.controlar, 10)
         this.eu=document.getElementById(this.id)
-        //this.eu=document.querySelector(`#${this.id}`)
         numBola++
         num_objetos.innerHTML=numBola
     }
@@ -54,21 +52,11 @@ class Bola{
         this.palco.appendChild(div)
     }
     controle_bordas=()=>{
-        // if((this.px+this.tam >= larguraPalco) || (this.px <= 0)){
-        //     this.dirx*=-1
-        // }
-        // if((this.py+this.tam >= alturaPalco) || (this.py <= 0)){
-        //     this.diry*=-1
-        // }
-        if(this.px+this.tam >= larguraPalco){
-            this.dirx=-1
-        }else if(this.px <= 0){
-            this.dirx=1
+        if((this.px+this.tam >= larguraPalco) || (this.px <= 0)){
+            this.dirx*=-1
         }
-        if(this.py+this.tam >= alturaPalco){
-            this.diry=-1
-        }else if(this.py <= 0){
-            this.diry=1
+        if((this.py+this.tam >= alturaPalco) || (this.py <= 0)){
+            this.diry*=-1
         }
     }
     controlar=()=>{
