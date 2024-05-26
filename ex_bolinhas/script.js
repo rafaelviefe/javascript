@@ -12,9 +12,9 @@ let numBola=0
 class Bola{
     constructor(arrayBolas,palco){
         this.tam=Math.floor(Math.random()*30)+10
-        this.r=Math.floor(Math.random()*255)
-        this.g=Math.floor(Math.random()*255)
-        this.b=Math.floor(Math.random()*255)
+        this.r=Math.floor(Math.random()*225)+30
+        this.g=Math.floor(Math.random()*200)
+        this.b=Math.floor(Math.random()*225)+20
         this.px=Math.floor(Math.random()*(larguraPalco-this.tam))
         this.py=Math.floor(Math.random()*(alturaPalco-this.tam))
         this.velx=Math.floor(Math.random()*4)+1
