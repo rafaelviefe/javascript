@@ -54,11 +54,11 @@ input[type='number'], #num_objetos{
     width: 100%;
     min-height: 87vh;
     --s: 50px;
-  --c: #08040e;
-  --_s: calc(2*var(--s)) calc(2*var(--s));
-  --_g: 35.36% 35.36% at;
-  --_c: #09021300 66%,#18082565 68% 70%,#00000000 72%;
-  background: 
+    --c: #0d0718;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #09021300 66%,#180825c9 68% 70%,#00000000 72%;
+    background: 
     radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s), 
     radial-gradient(var(--_g) 0 75%,var(--_c)) var(--s) var(--s)/var(--_s), 
     radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s), 
